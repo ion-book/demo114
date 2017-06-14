@@ -1,26 +1,24 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## Repositorio basado en el artículo [Peticiones en paralelo con ForkJoin](https://www.ion-book.com/blog/tips/fork-join/)
 
-## How to use this template
+Este proyecto usa:
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+1. Cordova 7
+1. Ionic CLI 3
+1. Ionic 3
+1. Ionic Native 3
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+## Recuerda:
 
-### With the Ionic CLI:
+Si quieres ejecutar este demo un tu computadora, debes tener el entorno de ionic instalado y luego de descargar o clonar el proyecto debes ubicarte en tu proyecto en la terminal y luego ejecutar
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+```
+npm install
+````
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+Y luego
+
+```
+ionic cordova prepare
 ```
 
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+esto es para descargar todas las dependencias del proyecto.
