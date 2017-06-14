@@ -1,14 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Demo114</ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <ion-list>
+      <ion-item *ngFor="let event of events">
+        <h2>{{ event.title }}</h2>
+        <p>Date {{ event.date | date }}</p>
+        <p>Speaker: {{ event.speaker.name }}</p>
+        <p>Job: {{ event.speaker.job }}</p>
+      </ion-item>
+    </ion-list>
 </ion-content>
