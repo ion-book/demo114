@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
 import 'rxjs/add/operator/map';
@@ -10,16 +10,14 @@ export class TestProvider {
   events: any[] = [];
   speakers:  any[] = [];
 
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
 
   getEvents(){
-    return this.http.get('assets/data/events.json')
-    .map(res => res.json())
+    return this.http.get('assets/data/events.json');
   }
 
   getSpeakers(){
-    return this.http.get('assets/data/speakers.json')
-    .map(res => res.json())
+    return this.http.get('assets/data/speakers.json');
   }
 
   getEventsWithSpeaker(){
@@ -46,7 +44,7 @@ export class TestProvider {
     }).reduce((a,b) =>{
       return a.concat(b);
     }, []);
-    
+
   }
 
 }
